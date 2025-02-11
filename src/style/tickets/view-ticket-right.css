@@ -1,0 +1,34 @@
+.Middle-Right {
+    position: absolute; 
+    top: 73px;          
+    right: 450px;         
+    text-align: center;  
+  }
+  .category p,
+  .priority p,
+  .source p {
+    display: inline;
+  }
+  
+  .category{
+    display: flex;
+    
+  }
+  .priority{
+    display: flex;
+    
+  }
+  .source{
+    display: flex;
+    
+  }
+  .category-colon{
+    margin-left: 86px;
+  }
+  .priority-colon{
+    margin-left: 100px;
+  }
+  .source-colon{
+    margin-left: 102px;
+  }
+  
