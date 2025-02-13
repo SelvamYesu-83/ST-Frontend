@@ -1,0 +1,105 @@
+.closeticket{
+    color: #3754A5;
+    text-align: left;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .close-ticketno{
+    text-align: left;
+    padding-left: 50px;
+    display: flex;
+  }
+  .close-projectmodule{
+    text-align: left;
+    padding-left: 50px;
+    display: flex;
+  }
+  .close-module{
+    text-align: left;
+    padding-left: 50px;
+    display: flex;
+  }
+  .close-subject{
+    text-align: left;
+    padding-left: 50px;
+    display: flex;
+  }
+  .close-rasied{
+    text-align: left;
+    padding-left: 50px;
+    display: flex;
+  }
+  .close-problem{
+    text-align: left;
+    padding-left: 50px;
+    display: flex;
+  }
+  
+  .close-duedate{
+    text-align: left;
+    padding-left: 50px;
+    display: flex;
+  }
+  .close-solution{
+    text-align: left;
+    padding-left: 50px;
+    display: flex;
+    padding-bottom: 50px;
+  }
+  
+  
+  .close-ticketno-colon{
+    margin-left: 158px;
+  }
+  .close-projectmodule-colon{
+    margin-left: 155px;
+  }
+  .close-module-colon{
+    margin-left: 209px;
+  }
+  .close-subject-colon{
+    margin-left: 211px;
+  }
+  .close-rasied-colon{
+    margin-left: 40px;
+  }
+  .close-problem-colon{
+    margin-left: 120px;
+  }
+  .close-duedate-colon{
+    margin-left: 195px;
+  }
+  .close-solution-colon{
+    margin-left: 202px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+  
+
+  .Close-container{
+    text-align: center;
+    margin-left: 70px;
+    margin-top: 30px;
+  }
+  .Close button{
+    padding: 10px 15px;
+    background-color: #20409A;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+  }
+  
+
+  .description{
+    margin-top: 15px;
+    margin-left: 5px;
+    padding-bottom: 40px;
+    padding-right: 360px;
+    text-align: left;
+    
+  }
+  
