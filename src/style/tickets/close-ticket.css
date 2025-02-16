@@ -1,0 +1,7 @@
+.closeticket-details{
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    padding: 0px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px 0 hsl(240, 1%, 27%), 0 0px 0px 0 #515255;
+}
