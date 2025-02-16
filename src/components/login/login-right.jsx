@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../style/login/login-right.css";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import CSS
+import { ToastContainer } from "react-toastify"; // Import ToastContainer
 
 function LoginRight() {
   const [email, setEmail] = useState("");
@@ -44,21 +47,21 @@ function LoginRight() {
 
     if (validateInputs()) {
       try {
-        const response = await axios.post("http://localhost:5001/login", {
-          email,
-          password_hash,
+        const response = await axios.post("http://192.168.86.228:4002/api/user/login", {
+          userName: email,
+          password: password_hash,
         });
 
         if (response.status === 200) {
-          navigate("/Ticket");
+          toast.success("Login Successful! 🎉");
+        
+          setTimeout(() => {
+            navigate("/Ticket");
+          }, 3000); // 2-second delay to show toast
         }
+        
       } catch (error) {
-        if (error.response && error.response.status === 401) {
-          alert("Invalid email or password");
-        } else {
-          console.error("Error:", error);
-          alert("Something went wrong");
-        }
+        toast.error(error.response?.data?.message || "Something went wrong! ❌");
       }
     }
   };
@@ -91,7 +94,6 @@ function LoginRight() {
                 value={password_hash}
                 onChange={(e) => setpassword_hash(e.target.value)}
               />
-
               {passwordError && <div className="error">{passwordError}</div>}
             </div>
           </div>
@@ -100,19 +102,17 @@ function LoginRight() {
               <input type="checkbox" id="remember" />
               <label htmlFor="remember">Remember Password</label>
             </div>
-            {/* <div className="forgot-password">Forgot Password</div> */}
           </div>
           <div className="login-btn-container">
             <button type="submit" className="login-btn">
               Login
             </button>
           </div>
-          {/* <div className="signup-link">
-            <span className="signup-text">Don’t have an account? </span>
-            <span className="signup-action">Sign up</span>
-          </div> */}
         </form>
       </div>
+
+      {/* Add ToastContainer at the bottom */}
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 }
