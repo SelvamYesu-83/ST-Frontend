@@ -47,7 +47,7 @@ function LoginRight() {
 
     if (validateInputs()) {
       try {
-        const response = await axios.post("http://192.168.86.228:4002/api/user/login", {
+        const response = await axios.post("http://10.237.102.78:4002/api/user/login", {
           userName: email,
           password: password_hash,
         });
